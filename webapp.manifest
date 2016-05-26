@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "name": "DHIS2 OrgUnit APP",
+    "description": "",
+    "launch_path": "/index.html",
+    "appType": "APP",
+    "icons": {
+        "16": "/img/orgunit-18.png",
+        "48": "/img/orgunit-48.png",
+        "128": "/img/orgunit-128.png"
+    },
+    "developer": {
+        "name": "jembi Health Systems NPC",
+        "url": "http://www.jembi.org/"
+    },
+    "default_locale": "en",
+    "activities": {
+        "dhis": {
+            "href": "*"
+        }
+    }
+}

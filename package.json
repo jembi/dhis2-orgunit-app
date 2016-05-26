@@ -1,0 +1,28 @@
+{
+  "name": "dhis2-orgunit-app",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "tap tests/*.js && standard -v | snazzy",
+    "build": "browserify --entry js/app.js --outfile dist/bundle.js",
+    "watch": "watchify --entry js/app.js --outfile dist/bundle.js",
+    "serve": "concurrently 'npm run watch' 'http-server'"
+  },
+  "author": "Jembi Health Systems NPC",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-material": "^1.1.0-rc4-master-06e7e99",
+    "angular-route": "^1.5.5"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "concurrently": "^2.1.0",
+    "snazzy": "^4.0.0",
+    "standard": "^7.1.0",
+    "tap": "^5.7.2",
+    "watchify": "^3.7.0"
+  }
+}
