@@ -6,7 +6,8 @@
     "test": "tap tests/*.js --cov && standard -v | snazzy",
     "build": "browserify --entry js/app.js --outfile dist/bundle.js",
     "watch": "watchify --entry js/app.js --outfile dist/bundle.js",
-    "serve": "concurrently 'npm run watch' 'http-server'"
+    "serve": "concurrently 'npm run watch' 'http-server'",
+    "package": "npm run build && bestzip dhis2-orgunit-app.zip css/ dist/ img/ js/ node_modules/ views/ index.html manifest.webapp"
   },
   "author": "Jembi Health Systems NPC",
   "license": "MPL-2.0",

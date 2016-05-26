@@ -3,11 +3,36 @@
   <head>
     <title>DHIS2 OrgUnit App</title>
 
+    <!-- Stylesheets related to the dhis2 menu -->
+    <link type="text/css" rel="stylesheet" href="/dhis-web-commons/font-awesome/css/font-awesome.min.css"/>
+    <link type="text/css" rel="stylesheet" media="screen" href="/dhis-web-commons/css/menu.css">
+
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body ng-app="dhisOrgUnitApp">
-    <ng-view></ng-view>
+
+    <div layout="column">
+      <d2-header-bar></d2-header-bar>
+      <ng-view style="margin-top: 44px"></ng-view>
+    </div>
+
+    <!-- include all required modules using browerify -->
     <script src="dist/bundle.js"></script>
+
+    <!-- DHIS2 menu -->
+    <!-- DHIS2 Settings initialization for a baseUrl that is used for the menu -->
+    <script>
+      window.dhis2 = window.dhis2 || {}
+      dhis2.settings = dhis2.settings || {}
+      dhis2.settings.baseUrl = ''
+    </script>
+
+    <!-- DHIS2 Menu scripts -->
+    <script type="text/javascript" src="/dhis-web-commons/javascripts/jQuery/jquery.min.js"></script>
+    <script type="text/javascript" src="/dhis-web-commons/javascripts/dhis2/dhis2.translate.js"></script>
+    <script type="text/javascript" src="/dhis-web-commons/javascripts/dhis2/dhis2.menu.js"></script>
+    <script type="text/javascript" src="/dhis-web-commons/javascripts/dhis2/dhis2.menu.ui.js"></script>
+    <!-- /end DHIS2 menu -->
   </body>
 </html>
