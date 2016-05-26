@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A custom app to manage adding new orgunits, which supports matching of existing orgunits",
   "scripts": {
-    "test": "tap tests/*.js && standard -v | snazzy",
+    "test": "tap tests/*.js --cov && standard -v | snazzy",
     "build": "browserify --entry js/app.js --outfile dist/bundle.js",
     "watch": "watchify --entry js/app.js --outfile dist/bundle.js",
     "serve": "concurrently 'npm run watch' 'http-server'"
