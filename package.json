@@ -1,7 +1,7 @@
 {
   "name": "dhis2-orgunit-app",
   "version": "0.1.0",
-  "description": "",
+  "description": "A custom app to manage adding new orgunits, which supports matching of existing orgunits",
   "scripts": {
     "test": "tap tests/*.js && standard -v | snazzy",
     "build": "browserify --entry js/app.js --outfile dist/bundle.js",
@@ -24,5 +24,22 @@
     "standard": "^7.1.0",
     "tap": "^5.7.2",
     "watchify": "^3.7.0"
-  }
+  },
+  "main": "js/app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jembi/dhis2-orgunit-app.git"
+  },
+  "keywords": [
+    "dhis2",
+    "orgunit",
+    "matching"
+  ],
+  "bugs": {
+    "url": "https://github.com/jembi/dhis2-orgunit-app/issues"
+  },
+  "homepage": "https://github.com/jembi/dhis2-orgunit-app#readme"
 }

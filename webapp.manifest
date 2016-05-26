@@ -1,7 +1,7 @@
 {
     "version": "0.1.0",
     "name": "DHIS2 OrgUnit APP",
-    "description": "",
+    "description": "A custom app to manage adding new orgunits, which supports matching of existing orgunits",
     "launch_path": "/index.html",
     "appType": "APP",
     "icons": {
