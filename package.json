@@ -20,6 +20,7 @@
   "devDependencies": {
     "browserify": "^13.0.1",
     "concurrently": "^2.1.0",
+    "http-server": "^0.9.0",
     "snazzy": "^4.0.0",
     "standard": "^7.1.0",
     "tap": "^5.7.2",
