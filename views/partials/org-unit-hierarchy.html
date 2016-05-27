@@ -1,4 +1,12 @@
 <div>
-test lalala
-{{hello}}
+  <div ng-if="!orgUnit"></div>
+  <div ng-if="orgUnit">
+    <div ng-click="selectOrgUnit(orgUnit)">{{orgUnit.displayName}}</div>
+    
+    <ul ng-if="!orgUnit.collapse">
+      <li ng-repeat="child in orgUnit.children">
+        <org-unit-hierarchy-nested org-unit="child" selected="selected"></org-unit-hierarchy-nested>
+      </li>
+    </ul>
+  </div>
 </div>

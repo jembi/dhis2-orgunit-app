@@ -5,5 +5,7 @@
 <md-card flex="25">
   <h1 class="silly">OrgUnit Hierarchy</h1>
 
-  <org-unit-hierarchy></org-unit-hierarchy>
+  <org-unit-hierarchy org-unit="root" selected="selectDst"></org-unit-hierarchy>
+
+  <div>You have selected {{selectDst.selected.displayName}}</div>
 </md-card>
