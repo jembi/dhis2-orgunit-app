@@ -30,7 +30,7 @@ module.exports = function(Api) {
             },
             errorHandler
           )
-        } else {
+        } else if (orgUnit.children.length > 0) {
           orgUnit.collapse = !orgUnit.collapse
         }
       }

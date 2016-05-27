@@ -1,12 +1,16 @@
 <div>
   <div ng-if="!orgUnit"></div>
   <div ng-if="orgUnit">
-    <div ng-click="selectOrgUnit(orgUnit)">{{orgUnit.displayName}}</div>
+    <div ng-click="selectOrgUnit(orgUnit)">
+      <i ng-if="orgUnit.children && orgUnit.children.length > 0 && orgUnit.collapse" class="fa fa-angle-right" aria-hidden="true"></i>
+      <i ng-if="orgUnit.children && orgUnit.children.length > 0 && !orgUnit.collapse" class="fa fa-angle-down" aria-hidden="true"></i>
+      {{orgUnit.displayName}}
+    </div>
     
-    <ul ng-if="!orgUnit.collapse">
-      <li ng-repeat="child in orgUnit.children">
+    <md-list ng-if="!orgUnit.collapse">
+      <md-list-item ng-repeat="child in orgUnit.children">
         <org-unit-hierarchy-nested org-unit="child" selected="selected"></org-unit-hierarchy-nested>
-      </li>
-    </ul>
+      </md-list-item>
+    </md-list>
   </div>
 </div>
