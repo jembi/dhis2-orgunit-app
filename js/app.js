@@ -33,7 +33,11 @@ app.config(function ($routeProvider) {
       templateUrl: 'views/hierarchy.html',
       controller: 'hierarchyCtrl'
     })
+    .when('/add-site', {
+      templateUrl: 'views/add-site.html',
+      controller: 'AddSiteCtrl'
+    })
     .otherwise({
-      redirectTo: '/one'
+      redirectTo: '/hierarchy'
     })
 })
