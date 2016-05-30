@@ -1,0 +1,62 @@
+<h1>Add site details</h1>
+<p>
+  Enter the orgunit details
+</p>
+<md-card layout-margin>
+  <h2>Details</h2>
+  <md-input-container>
+    <label>Name</label>
+    <input class="reset-border" type="text" ng-model="orgunit.name">
+  </md-input-container>
+  <md-input-container>
+    <label>Short name</label>
+    <input class="reset-border" type="text" ng-model="orgunit.shortName">
+  </md-input-container>
+  <md-input-container>
+    <label>Description</label>
+    <input class="reset-border" type="text" ng-model="orgunit.description">
+  </md-input-container>
+  <md-input-container>
+    <label>Code</label>
+    <input class="reset-border" type="text" ng-model="orgunit.code">
+  </md-input-container>
+  <div layout="row" layout-align="left center">
+    <label>Opening date</label>
+    <md-datepicker ng-model="orgunit.openingDate"></md-datepicker>
+  </div>
+  <md-input-container>
+    <label>Comment</label>
+    <input class="reset-border" type="text" ng-model="orgunit.comment">
+  </md-input-container>
+  <md-input-container>
+    <label>Longitude</label>
+    <input class="reset-border" type="text" ng-model="orgunit.long">
+  </md-input-container>
+  <md-input-container>
+    <label>Latitude</label>
+    <input class="reset-border" type="text" ng-model="orgunit.lat">
+  </md-input-container>
+  <md-input-container>
+    <label>URL</label>
+    <input class="reset-border" type="text" ng-model="orgunit.url">
+  </md-input-container>
+</md-card>
+<md-card layout-margin>
+  <h2>Contact Information</h2>
+  <md-input-container>
+    <label>Contact person</label>
+    <input class="reset-border" type="text" ng-model="orgunit.contactPerson">
+  </md-input-container><md-input-container>
+    <label>Address</label>
+    <input class="reset-border" type="text" ng-model="orgunit.address">
+  </md-input-container><md-input-container>
+    <label>E-mail</label>
+    <input class="reset-border" type="text" ng-model="orgunit.email">
+  </md-input-container><md-input-container>
+    <label>Phone number</label>
+    <input class="reset-border" type="text" ng-model="orgunit.phoneNumber">
+  </md-input-container>
+</md-card>
+<div layout="row">
+  <md-button class="md-primary md-raised" ng-click="next(orgunit)">Next</md-button>
+</div>

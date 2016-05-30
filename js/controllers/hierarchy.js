@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function ($scope, Api) {
+module.exports = function ($scope, Api, State, $window) {
   var errorHandler =  function(err) {
     console.error(err)
   }
@@ -20,6 +20,11 @@ module.exports = function ($scope, Api) {
 
   $scope.selectDst = {
     selected: null
+  }
+
+  $scope.next = function (parent) {
+    State.setParent(parent)
+    $window.location.href = 'index.html#/add-site'
   }
 
   loadRootOrgUnit()

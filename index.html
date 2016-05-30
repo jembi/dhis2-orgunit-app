@@ -14,7 +14,14 @@
 
     <div layout="column">
       <d2-header-bar></d2-header-bar>
-      <ng-view style="margin-top: 44px"></ng-view>
+      <md-toolbar layout="row" layout-padding style="margin-top: 44px">
+        <h1>DHIS2 OrgUnit App</h1>
+      </md-toolbar>
+      <div layout="row">
+        <div flex-offset="33" flex="33">
+          <ng-view></ng-view>
+        </div>
+      </div>
     </div>
 
     <!-- include all required modules using browerify -->

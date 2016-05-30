@@ -1,13 +1,9 @@
-<md-toolbar layout="row">
-  <h1>DHIS2 OrgUnit App</h1>
-</md-toolbar>
-
 <md-content flex layout-padding>
-  <h1 class="silly">OrgUnit Hierarchy</h1>
-  <p>Choose a position in the hierarchy for the new site:</p>
+  <h1>OrgUnit Hierarchy</h1>
+  <p>Choose a position in the hierarchy for the new orgunit</p>
 
   <org-unit-hierarchy org-unit="root" selected="selectDst" flex layout-padding></org-unit-hierarchy>
 
   <p>You have selected <strong>{{selectDst.selected.displayName}}</strong></p>
-  <md-button ng-disabled="!selectDst.selected">Next</md-button>
+  <md-button class="md-primary md-raised" ng-disabled="!selectDst.selected" ng-click="next(selectDst.selected)">Next</md-button>
 </md-content>

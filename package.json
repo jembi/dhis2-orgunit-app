@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "description": "A custom app to manage adding new orgunits, which supports matching of existing orgunits",
   "scripts": {
-    "test": "tap tests/*.js --cov && standard -v | snazzy",
+    "test": "tap tests/*.js --cov -c -R spec && standard -v | snazzy",
     "build": "browserify --entry js/app.js --outfile dist/bundle.js",
     "watch": "watchify --entry js/app.js --outfile dist/bundle.js",
-    "serve": "concurrently 'npm run watch' 'http-server'",
-    "package": "npm run build && bestzip dhis2-orgunit-app.zip css/ dist/ img/ js/ node_modules/ views/ index.html manifest.webapp"
+    "serve": "concurrently 'npm run watch' 'http-server' 'onchange js/**/*.js tests/**/*.js -- npm test'",
+    "package": "npm run build && bestzip dhis2-orgunit-app.zip css/ dist/ img/ js/ node_modules/ views/ index.html manifest.webapp",
+    "install": "curl -X DELETE -u admin:district http://localhost:9999/api/apps/dhis2-orgunit-app || true && curl -X POST -u admin:district -F file=@dhis2-orgunit-app.zip http://localhost:9999/api/apps",
+    "deploy": "npm run package && npm run install"
   },
   "author": "Jembi Health Systems NPC",
   "license": "MPL-2.0",
@@ -23,6 +25,8 @@
     "browserify": "^13.0.1",
     "concurrently": "^2.1.0",
     "http-server": "^0.9.0",
+    "onchange": "^2.4.0",
+    "sinon": "^1.17.4",
     "snazzy": "^4.0.0",
     "standard": "^7.1.0",
     "tap": "^5.7.2",
