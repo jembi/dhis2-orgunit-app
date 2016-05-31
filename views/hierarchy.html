@@ -6,8 +6,10 @@
   <h1 class="silly">OrgUnit Hierarchy</h1>
   <p>Choose a position in the hierarchy for the new site:</p>
 
-  <org-unit-hierarchy org-unit="root" selected="selectDst" flex layout-padding></org-unit-hierarchy>
+  <md-card flex="40">
+    <org-unit-hierarchy ng-repeat="root in roots" org-unit="root" selected="selectDst" flex layout-padding></org-unit-hierarchy>
+  </md-card>
 
-  <p>You have selected <strong>{{selectDst.selected.displayName}}</strong></p>
+  <p>You have selected <strong>{{selectDst.selected.name}}</strong></p>
   <md-button ng-disabled="!selectDst.selected">Next</md-button>
 </md-content>
