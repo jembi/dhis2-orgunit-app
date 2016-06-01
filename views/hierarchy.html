@@ -2,8 +2,10 @@
   <h1>OrgUnit Hierarchy</h1>
   <p>Choose a position in the hierarchy for the new orgunit</p>
 
-  <org-unit-hierarchy org-unit="root" selected="selectDst" flex layout-padding></org-unit-hierarchy>
+  <md-card flex="40">
+    <org-unit-hierarchy ng-repeat="root in roots" org-unit="root" selected="selectDst" flex layout-padding></org-unit-hierarchy>
+  </md-card>
 
-  <p>You have selected <strong>{{selectDst.selected.displayName}}</strong></p>
+  <p>You have selected <strong>{{selectDst.selected.name}}</strong></p>
   <md-button class="md-primary md-raised" ng-disabled="!selectDst.selected" ng-click="next(selectDst.selected)">Next</md-button>
 </md-content>

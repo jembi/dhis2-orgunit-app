@@ -4,7 +4,7 @@
     <div ng-click="selectOrgUnit(orgUnit)">
       <i ng-if="orgUnit.children && orgUnit.children.length > 0 && orgUnit.collapse" class="fa fa-angle-right" aria-hidden="true"></i>
       <i ng-if="orgUnit.children && orgUnit.children.length > 0 && !orgUnit.collapse" class="fa fa-angle-down" aria-hidden="true"></i>
-      {{orgUnit.displayName}}
+      {{orgUnit.name}}
     </div>
     
     <md-list ng-if="!orgUnit.collapse">
