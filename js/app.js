@@ -21,14 +21,6 @@ require('./services')
 
 app.config(function ($routeProvider) {
   $routeProvider
-    .when('/one', {
-      templateUrl: 'views/one.html',
-      controller: 'oneCtrl'
-    })
-    .when('/two', {
-      templateUrl: 'views/two.html',
-      controller: 'twoCtrl'
-    })
     .when('/hierarchy', {
       templateUrl: 'views/hierarchy.html',
       controller: 'hierarchyCtrl'

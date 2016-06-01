@@ -1,15 +1,15 @@
 'use strict'
 
-module.exports = function(Api) {
-  return{
+module.exports = function (Api) {
+  return {
     restrict: 'EA',
     templateUrl: 'views/partials/org-unit-hierarchy.html',
     scope: {
       orgUnit: '=',
       selected: '='
     },
-    link: function(scope) {
-      scope.$watch('orgUnit', function(orgUnit) {
+    link: function (scope) {
+      scope.$watch('orgUnit', function (orgUnit) {
         if (orgUnit) {
           scope.orgUnit = orgUnit
 
@@ -20,20 +20,20 @@ module.exports = function(Api) {
 
           if (!orgUnit.loaded) {
             Api.OrgUnitChildren.get({ uid: orgUnit.id }, function (result) {
-                orgUnit.children = result.children
-                orgUnit.loaded = true
-              },
+              orgUnit.children = result.children
+              orgUnit.loaded = true
+            },
               errorHandler
             )
           }
         }
       })
 
-      var errorHandler =  function(err) {
+      var errorHandler = function (err) {
         console.error(err)
       }
 
-      var selectOrgUnit = function(orgUnit) {
+      var selectOrgUnit = function (orgUnit) {
         scope.selected.selected = orgUnit
 
         if (!orgUnit.children) {

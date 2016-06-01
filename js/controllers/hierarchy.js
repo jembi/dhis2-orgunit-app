@@ -1,12 +1,12 @@
 'use strict'
 
 module.exports = function ($scope, Api, State, $window) {
-  var errorHandler =  function(err) {
+  var errorHandler = function (err) {
     console.error(err)
   }
 
-  var loadRootOrgUnit = function() {
-    var onSuccess = function(result) {
+  var loadRootOrgUnit = function () {
+    var onSuccess = function (result) {
       $scope.roots = result.organisationUnits
     }
 

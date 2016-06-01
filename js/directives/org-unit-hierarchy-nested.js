@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = function($compile) {
+module.exports = function ($compile) {
   return {
     restrict: 'EA',
     template: '<div/>',
@@ -8,7 +8,7 @@ module.exports = function($compile) {
       orgUnit: '=',
       selected: '='
     },
-    link: function(scope, element){
+    link: function (scope, element) {
       if (scope.orgUnit) {
         element.append('<org-unit-hierarchy org-unit="orgUnit" selected="selected"></org-unit-hierarchy>')
         $compile(element.contents())(scope)
