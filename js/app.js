@@ -37,6 +37,10 @@ app.config(function ($routeProvider) {
       templateUrl: 'views/add-site.html',
       controller: 'AddSiteCtrl'
     })
+    .when('/match', {
+      templateUrl: 'views/match.html',
+      controller: 'MatchCtrl'
+    })
     .otherwise({
       redirectTo: '/hierarchy'
     })
