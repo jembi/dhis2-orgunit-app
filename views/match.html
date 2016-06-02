@@ -12,8 +12,10 @@
       </div>
     </md-list-item>
   </md-list>
-  <md-button class="md-raised md-warn" href="index.html#/hierarchy">Yes, one of them matches, abort!</md-button>
-  <md-button class="md-raised md-primary" ng-click="saveOrgunit(orgunit)">No, create my new site</md-button>
+  <div layout="row">
+    <md-button class="md-raised md-warn" href="index.html#/hierarchy">Yes, one of them matches, abort!</md-button>
+    <md-button class="md-raised md-primary" ng-click="saveOrgunit(orgunit)">No, create my new site</md-button>
+  </div>
 </div>
 
 <div ng-show="hasMatches !== undefined &amp;&amp; !hasMatches">
