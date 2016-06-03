@@ -8,8 +8,8 @@
     "watch": "watchify --entry js/app.js --outfile dist/bundle.js",
     "serve": "concurrently 'npm run watch' 'http-server' 'onchange js/**/*.js tests/**/*.js -- npm test'",
     "package": "npm run build && bestzip dhis2-orgunit-app.zip css/ dist/ img/ js/ node_modules/ views/ index.html manifest.webapp",
-    "install": "curl -X DELETE -u admin:district http://localhost:9999/api/apps/dhis2-orgunit-app || true && curl -X POST -u admin:district -F file=@dhis2-orgunit-app.zip http://localhost:9999/api/apps",
-    "deploy": "npm run package && npm run install"
+    "install-app": "curl -X DELETE -u admin:district http://localhost:9999/api/apps/dhis2-orgunit-app || true && curl -X POST -u admin:district -F file=@dhis2-orgunit-app.zip http://localhost:9999/api/apps",
+    "deploy": "npm run package && npm run install-app"
   },
   "author": "Jembi Health Systems NPC",
   "license": "MPL-2.0",
