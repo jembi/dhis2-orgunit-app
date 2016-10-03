@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DHIS2 OrgUnit App</title>
+    <title>OrgUnit Matching App</title>
 
     <!-- Stylesheets related to the dhis2 menu -->
     <link type="text/css" rel="stylesheet" href="/dhis-web-commons/font-awesome/css/font-awesome.min.css"/>
     <link type="text/css" rel="stylesheet" media="screen" href="/dhis-web-commons/css/menu.css">
 
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body ng-app="dhisOrgUnitApp">
 
     <div layout="column">
       <d2-header-bar></d2-header-bar>
-      <ng-view style="margin-top: 44px"></ng-view>
+      <md-toolbar layout="row" layout-padding style="margin-top: 44px">
+        <h1>OrgUnit Matching App</h1>
+      </md-toolbar>
+      <div layout="row">
+        <div flex-offset="33" flex="33">
+          <ng-view></ng-view>
+        </div>
+      </div>
     </div>
 
     <!-- include all required modules using browerify -->

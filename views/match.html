@@ -1,0 +1,33 @@
+<div ng-show="hasMatches !== undefined &amp;&amp; hasMatches">
+  <h1>Found existing orgunits</h1>
+  <p>
+    The following sites match the orgunit you entered, do any of these match your orgunit?
+  </p>
+  <md-list>
+    <md-list-item class="md-2-line" ng-repeat="match in matches">
+      <i class="material-icons md-avatar" ng-style="{ 'font-size': '48px' }">business</i>
+      <div class="md-list-item-text">
+        <h3>{{match.resource.name}}</h3>
+        <p>id: {{match.resource.id}}, match score: {{match.search.score * 100}}%</p>
+      </div>
+    </md-list-item>
+  </md-list>
+  <div layout="row">
+    <md-button class="md-raised md-warn" href="index.html#/hierarchy">Yes, one of them matches, abort!</md-button>
+    <md-button class="md-raised md-primary" ng-click="saveOrgunit(orgunit)">No, create my new site</md-button>
+  </div>
+</div>
+
+<div ng-show="hasMatches !== undefined &amp;&amp; !hasMatches">
+  <h1>New site added!</h1>
+  <a href="index.html#/hierarchy">
+    Click here to add another
+  </a>
+</div>
+
+<div ng-show="errorText">
+  <h1>An error occured, orgunit not saved</h1>
+  <p>
+    {{ errorText }}
+  </p>
+</div>
